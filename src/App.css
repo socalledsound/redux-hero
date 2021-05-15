@@ -1,0 +1,76 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.state-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.state-item {
+  font-size: 0.8rem;
+  margin: 0.1rem;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.move-button {
+  width: 10rem;
+  /* height: 4rem; */
+  margin-top: 20px;
+  margin-left: 20px;
+  box-sizing: border-box;
+  padding: 1.2rem;
+  border-radius: 0.3rem;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+  transition: all 0.1s ease 0s;
+}
+
+.up {
+  background-color: rgb(218, 118, 118);
+}
+.up:hover {
+  background-color: red;
+}
+.down {
+  background-color: rgb(92, 164, 92);
+}
+.down:hover {
+  background-color: green;
+}
+
+.left {
+  background-color: rgb(172, 124, 216);
+}
+
+.left:hover {
+  background-color: rgb(85, 1, 164);
+}
+
+.right {
+  background-color: rgb(118, 118, 208);
+}
+
+.right:hover {
+  background-color: blue;
+}

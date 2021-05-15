@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { move, takeDamage, drinkPotion, gainXp, levelUp } from './redux/actions'
+import './App.css'
 class App extends Component {
   state = {  }
 
@@ -16,23 +17,38 @@ class App extends Component {
 
   }
 
+  move = (x, y) => {
+    const { move } = this.props;
+    move(x, y)
+  }
 
   render() { 
     const { xp, level, position, stats, inventory } = this.props
     
     return ( 
       <div>
-      <div>
-        <p>xp : {xp} </p>
-        <p>level: {level}</p>
-        <p>position: x: {position.x} y : {position.y}</p>
-        <p>stats : health {stats.health}, maxHealth: {stats.maxHealth}</p>
-        <p>inventory : potions: {inventory.potions}</p>
-      </div>
-      <div>
-        <button onClick>move left</button>
-        <button onClick>move right</button>
-      </div>
+        <div className="state-container">
+          <p className="state-item">position: x: {position.x} y : {position.y}</p>
+          <p className="state-item">xp : {xp} </p>
+          <p className="state-item">level: {level}</p>
+          <p className="state-item">stats : health {stats.health}, maxHealth: {stats.maxHealth}</p>
+          <p className="state-item">inventory : potions: {inventory.potions}</p>
+        </div>
+        <div className='buttons-container'>
+          <div className='row'>
+            <button onClick={() => this.move(0, 1)} className="move-button up">move up</button>
+          </div>
+          <div className='row'>
+            <button onClick={() => this.move(-1, 0)} className="move-button left">move left</button>
+            <button onClick={() => this.move(1, 0)} className="move-button right">move right</button>
+          </div>
+          <div className='row'>
+            <button onClick={() => this.move(0, -1)} className="move-button down">move down</button>
+          </div>
+
+        
+        
+        </div>
       </div>
      );
   }
