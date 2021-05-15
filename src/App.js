@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { move, takeDamage, drinkPotion, gainXp, levelUp } from './redux/actions'
+import { move, takeDamage, drinkPotion, gainXp, levelUp } from './redux/actions.redux-actions'
 import './App.css'
 class App extends Component {
   state = {  }
