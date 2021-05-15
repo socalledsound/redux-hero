@@ -55,11 +55,11 @@ class App extends Component {
 }
  
 const mapStateToProps = state => ({
-  xp: state.xp,
-  level: state.level,
-  position: state.position,
-  stats: state.stats,
-  inventory: state.inventory,
+  xp: state.hero.xp,
+  level: state.hero.level,
+  position: state.hero.position,
+  stats: state.hero.stats,
+  inventory: state.hero.inventory,
 })
 
 const mapDispatchToProps = dispatch => ({

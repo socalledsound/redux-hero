@@ -1,21 +1,8 @@
+import { createAction } from 'redux-actions'
 import { Actions } from './actions.types'
-//  Action Creators
-  //
-  export const gainXp = (xp) => ({
-    type: Actions.GAIN_XP,
-    payload: xp
-  });
-  export const levelUp = () => ({
-    type: Actions.LEVEL_UP
-  });
-  export const move = (x, y) => ({
-    type: Actions.MOVE,
-    payload: { x, y }
-  });
-  export const drinkPotion = () => ({
-    type: Actions.DRINK_POTION
-  });
-  export const takeDamage = (amount) => ({
-    type: Actions.TAKE_DAMAGE,
-    payload: amount
-  });
+
+export const gainXp = createAction(Actions.GAIN_XP);
+export const levelUp = createAction(Actions.LEVEL_UP);
+export const move = createAction(Actions.MOVE, (x, y) => ({ x, y }));
+export const drinkPotion = createAction(Actions.DRINK_POTION);
+export const takeDamage = createAction(Actions.TAKE_DAMAGE);
